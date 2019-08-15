@@ -20,7 +20,6 @@
                 else{
                     $taikhoan = trim($_POST['taikhoan']);
                 }
-                
                 if(empty($_POST['matkhau'])){
                     $error[] = 'matkhau';
                 }
@@ -29,12 +28,12 @@
                 }
                 if(empty($error)){
                     $role = '';
+                    $tb = 'user';
                     $check_login = $db->login($taikhoan,$matkhau,$role);
                     $success[] = 'login-success';
-                    // $_SESSION['id'] = $_POST['id'];
                     if($check_login == true && $check_login['role']==1){
                         $_SESSION['taikhoan'] = $taikhoan;
-                        header('location:../view/index.php');
+                        header('location:http://localhost/Project_Internship/admin/view/index.php');
                     }
                     elseif($check_login == true && $check_login['role']==0){
                         $_SESSION['nguoidung'] = $taikhoan;

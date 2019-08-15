@@ -1,5 +1,15 @@
+<?php ob_start(); ?>
+<?php session_start(); ?>
+<?php
+    if(!isset($_SESSION['taikhoan'])){
+        header('location: login.php?controller=dang-nhap&action=login');
+}
+?>
 <?php
     include('../include/header.php');
+    include('../include/sidebar.php');
+    include('../include/footer.php');
+    include('../include/sidebar_right.php');
     include('../model/db_connect.php');
     $db = new Database();
     $db ->connect();
@@ -10,6 +20,11 @@
     else
     {
         $controller = '';
+    ?>
+    <div class="wrapper">
+          <?php include('../include/content.php') ?>
+    </div>
+    <?php
     }
     switch($controller)
     {
@@ -18,14 +33,5 @@
             require_once('../controller/thanhvien/index.php');
         }
     }
-    
 ?>
-<div id="wrapper">
-    <div id="page-wrapper">
-    </div>
-    <div class="clearfix"></div>
-</div>
-<?php 
-    include('../include/footer.php');
-
-?>
+<?php ob_flush();?>

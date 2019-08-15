@@ -1,5 +1,5 @@
 
-<div id="wrapper">
+<div id="wrapper" style="width:80%;  margin-left:260px;">
     <div id="page-wrapper">
 <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

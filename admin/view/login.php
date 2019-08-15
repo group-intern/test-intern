@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
     if(isset($_SESSION['taikhoan'])){
-        header('location:../view/index.php');
+        header('location:index.php');
 }
 ?>
 <?php
@@ -27,7 +27,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Login</title>
+    <title>Đăng nhập</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -56,23 +56,20 @@
   <?php if(isset($mesage)) echo $mesage; ?>
   <div class="app-cam">
 	  <form method="POST">
-      <input type="text" class="text" value="" name="taikhoan">
+      <input style="background:#3498db; color:#fff" type="text" class="text" value="<?php if(isset($_POST['taikhoan'])) echo $_POST['taikhoan'] ?>" placeholder="Tài khoản" name="taikhoan">
       <?php
             if(isset($error) && in_array('taikhoan',$error)){
                 echo "<label class='error'>Tài khoản không được để trống</label>";
             }?>
-      <input type="password" value="" name="matkhau">
+      <input style="background:#3498db; color:#fff" type="password" value="" placeholder="**********" name="matkhau">
       <?php
             if(isset($error) && in_array('matkhau',$error)){
                 echo "<label class='error'>Mật khẩu không được để trống</label>";
             }?>
       <div class="submit"><input type="submit" name="submit" value="Login"></div>
-      <div class="login-social-link">
-            <a href="index.html" class="facebook">
-                Facebook
-            </a>
-            <a href="index.html" class="twitter">
-                Twitter
+      <div class="login-social-link" style="width:400px; margin-left:65px;">
+            <a title="Trang chủ" href="http://localhost/Project_Internship/" class="facebook">
+                Về lại trang chủ
             </a>
           </div>
       <ul class="new">

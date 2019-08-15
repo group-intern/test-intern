@@ -56,23 +56,23 @@
             return $num;    
         }
 
-        public function getDataLogin()
-        {
-            $sql = "SELECT * FROM user";
-            $this->execute($sql);
-            if($this->num_rows()==0)
-            {
-                $data = 0;
-            }
-            else
-            {
-                while($datas = $this->getData())
-                {
-                    $data[] = $datas;
-                }
-            }
-            return $data;
-        }
+        // public function getDataLogin()
+        // {
+        //     $sql = "SELECT * FROM user";
+        //     $this->execute($sql);
+        //     if($this->num_rows()==0)
+        //     {
+        //         $data = 0;
+        //     }
+        //     else
+        //     {
+        //         while($datas = $this->getData())
+        //         {
+        //             $data[] = $datas;
+        //         }
+        //     }
+        //     return $data;
+        // }
         //PHUONG THUC LAY TOAN BO DU LIEU
         public function getAllData($table)
         {

@@ -1,0 +1,17 @@
+.error{
+    color: red;
+    font-size: 12px;
+    padding-left:25px; 
+  }
+input{border:1px solid #000;margin-bottom:.5em}
+input.error{border:1px solid red}
+label.error{background:url(../img/uncheck1.png) no-repeat;
+  height:25px;
+}
+label.valid{background:url(../img/check11.png) no-repeat;
+  width:16px;
+  height:25px;
+  position: absolute;
+  margin-top: -34px;
+  margin-left: 990px;
+}

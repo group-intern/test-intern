@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2019 at 11:54 AM
+-- Generation Time: Aug 15, 2019 at 11:05 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -43,8 +43,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `hoten`, `role`, `ngaytao`, `status`) VALUES
-(22, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 'Đây là admin', 1, '13/08/2019 ', 1),
-(25, 'nguoidung', 'c4ca4238a0b923820dcc509a6f75849b', 'nguoidung', 0, '13/08/2019 ', 1);
+(22, 'admin', '96e79218965eb72c92a549dd5a330112', 'Nguyễn Hữu Anh Lai', 1, '15/08/2019 ', 1),
+(25, 'nguoidung', '96e79218965eb72c92a549dd5a330112', 'Khách hàng', 0, '11/08/2019 ', 1),
+(48, 'admin2', '96e79218965eb72c92a549dd5a330112', 'Đây là admin2', 1, '15/08/2019 ', 1);
 
 --
 -- Indexes for dumped tables
@@ -64,7 +65,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

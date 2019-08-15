@@ -24,7 +24,8 @@ session_start();
 <?php
     if(isset($_SESSION['nguoidung']))
     echo "Xin chào user:".$_SESSION['nguoidung'];
-?>
+?> 
+<a href="http://localhost/Project_Internship/admin/view/login.php?controller=dang-nhap&action=login">Đăng xuất</a>
 <!-- <div id="wrapper">
     <div id="page-wrapper">
     </div>

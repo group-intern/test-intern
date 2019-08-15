@@ -1,5 +1,5 @@
-<?php
 
+<?php
     if(isset($_GET['action']))
     {
         $action = $_GET['action'];
@@ -15,11 +15,12 @@
             if(isset($_POST['submit'])){
                 $success = array();
                 $error = array();
+                $hoten = '';
                 if(empty($_POST['taikhoan'])){
                     $error[] = 'taikhoan';
                 }
                 else{
-                    $taikhoan = $_POST['taikhoan'];
+                    $taikhoan = trim($_POST['taikhoan']);
                 }
                 
                 if(empty($_POST['matkhau'])){
@@ -32,10 +33,9 @@
                     $error[] = 'nhaplaimatkhau';
                 }
                 else {
-                    $nhaplaimatkhau = md5($_POST['nhaplaimatkhau']);
+                    $nhaplaimatkhau = trim(md5($_POST['nhaplaimatkhau']));
                 }
-                if(empty($_POST['hoten'])){
-                    $error[] = 'hoten';
+                if(empty($_POST['hoten']) && is_int($_POST['hoten'])){
                 }
                 else{
                     $hoten = $_POST['hoten'];
